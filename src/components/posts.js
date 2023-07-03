@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "semantic-ui-react";
 import SingleComment from "./forms/comment";
+import CommentSection from "./forms/comment";
 
 function AppPosts(props) {
   const { posts } = props;
@@ -18,37 +19,7 @@ function AppPosts(props) {
                   <Card.Description>
                     {post.post}
 
-                    <SingleComment
-                      comment={{
-                        id: 1,
-                        author: "John",
-                        text: "First comment",
-                        comments: [
-                          {
-                            id: 2,
-                            author: "Alice",
-                            text: "Reply to first comment",
-                            comments: [
-                                {
-                                  id: 2,
-                                  author: "Alice",
-                                  text: "Reply to first comment",
-                                },
-                                {
-                                  id: 3,
-                                  author: "Bob",
-                                  text: "Another reply to first comment",
-                                },
-                              ],
-                          },
-                          {
-                            id: 3,
-                            author: "Bob",
-                            text: "Another reply to first comment",
-                          },
-                        ],
-                      }}
-                    />
+                    <CommentSection />
                   </Card.Description>
                 </Card.Content>
               </Card>
