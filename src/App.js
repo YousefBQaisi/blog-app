@@ -7,6 +7,7 @@ import { Container } from "semantic-ui-react";
 import Navbar from "./components/forms/Nav";
 import TwoSectionGrid from "./components/forms/gridImage";
 import ImageSlider from "./components/forms/imageSlider";
+import Footer from "./components/forms/Footer";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -31,6 +32,7 @@ function App() {
      
 
       </Container>
+      <Footer/>
     </div>
   );
 }
