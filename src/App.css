@@ -16,7 +16,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -25,7 +25,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -87,6 +87,7 @@
     background-color: #fff;
     margin-bottom: 5px;
   }
+  
 }
 
 
@@ -101,7 +102,10 @@
 .two-section-grid {
   margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -131,22 +135,28 @@
 
 @media only screen and (max-width: 767px) {
   .two-section-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* grid-template-columns: 1fr; */
   }
 
-  .text-section,
+  /* .text-section,
   .image-section {
     padding: 20px;
-    text-align: center;
-  }
+    text-align: center; */
+  /* } */
 }
 
 @media only screen and (min-width: 768px) {
   .two-section-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
   }
 
-  .text-section {
+  /* .text-section {
     grid-column: 1;
     grid-row: 1;
   }
@@ -154,7 +164,7 @@
   .image-section {
     grid-column: 2;
     grid-row: 1;
-  }
+  } */
 }
 
 .comment-section {
@@ -339,3 +349,46 @@
     flex-direction: column;
   }
 }
+
+
+
+
+
+  .d-flex-center{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row ;
+    justify-content: space-around;
+    align-items: normal;
+    margin: 10px 0 30px 0;
+  }
+  .rounded-1{
+  border-radius: 25px;
+  }
+  .shadow-1{
+    box-shadow: 1px 17px 105px rgba(32, 32, 32, 0.303);
+  }
+  .mt-1{
+    margin-top:1rem !important;
+  }
+  .mt-2{
+    margin-top:4rem !important;
+  }
+  .card{
+    margin: 20px;
+    padding: 16px;
+    border-radius: 35px;
+    box-shadow: 1px 17px 105px rgba(32, 32, 32, 0.003);
+  }
+
+  .title{
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .subtitle{
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .text-center{
+    text-align: center;
+  }
