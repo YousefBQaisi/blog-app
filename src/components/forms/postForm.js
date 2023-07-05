@@ -11,6 +11,7 @@ function PostFrom() {
     var formdata = {
       title: e.target.title.value,
       post: e.target.post.value,
+      comments : []
     };
     console.log(formdata);
 
